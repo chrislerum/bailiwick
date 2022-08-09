@@ -1,0 +1,2 @@
+class Hindrance < ApplicationRecord
+end
