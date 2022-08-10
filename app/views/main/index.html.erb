@@ -1,23 +1,25 @@
-<span class="title">Your possible interests:</span>
-<br>
-<% @interests.each do |interest| %>
-  <%= label_tag do %>
-  <%= check_box_tag interest.name %>
-  <%= interest.name %>
-<% end %>
+<div class="col-sm-12">
+  <span class="title">Your possible interests:</span>
   <br>
-<% end %>
-<br>
-<span class="title">Your possible hindrances:</span>
-<br>
-<% @hindrances.each do |hindrance| %>
-  <%= hindrance.name %>
+  <% @interests.each do |interest| %>
+    <%= label_tag do %>
+      <%= check_box_tag interest.name %>
+      <%= interest.name %>
+    <% end %>
+    <br>
+  <% end %>
   <br>
-<% end %>
-<br>
-<span class="title">Your possible excuses:</span>
-<br>
-<% @excuses.each do |excuse| %>
-  <%= excuse.description %>
+  <span class="title">Your possible hindrances:</span>
   <br>
-<% end %>
+  <% @hindrances.each do |hindrance| %>
+    <%= hindrance.name %>
+    <br>
+  <% end %>
+  <br>
+  <span class="title">Your possible excuses:</span>
+  <br>
+  <% @excuses.each do |excuse| %>
+    <%= excuse.description %>
+    <br>
+  <% end %>
+</div>
