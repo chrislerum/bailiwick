@@ -4,4 +4,8 @@ class MainController < ApplicationController
     @hindrances = Hindrance.all
     @excuses = Excuse.all
   end
+
+  def blank
+
+  end
 end

@@ -16,6 +16,14 @@ module Admin
     #   Foo.find_by!(slug: param)
     # end
 
+
+
+    def destroy_image
+      image = requested_resource.image
+      image.purge
+      redirect_back(fallback_location: requested_resource)
+    end
+
     # The result of this lookup will be available as `requested_resource`
 
     # Override this if you have certain roles that require a subset

@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users
   namespace :admin do
-      resources :interests
+      resources :interests do
+        delete :image, on: :member, action: :destroy_image
+      end
       resources :hindrances
       resources :excuses
+      resources :users
 
       root "interests#index"
     end
   resources :hindrances
   resources :interests
+  get 'main/blank'
   root "main#index"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
 end

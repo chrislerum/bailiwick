@@ -10,6 +10,8 @@ class InterestDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     name: Field::String,
+    description: Field::Text,
+    image: Field::ActiveStorage,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -31,6 +33,8 @@ class InterestDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     name
+    image
+    description
     created_at
     updated_at
   ].freeze
@@ -40,6 +44,8 @@ class InterestDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     name
+    image
+    description
   ].freeze
 
   # COLLECTION_FILTERS
