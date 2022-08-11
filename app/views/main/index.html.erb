@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-4">
+  <div class="col-4 mb-2">
     <span class="title">Your possible interests:</span>
     <br>
     <% @interests.each do |interest| %>
@@ -8,12 +8,12 @@
         <div class="card-body">
           <h5 class="card-title"><%= interest.name %></h5>
           <p class="card-text"><%= interest.description %></p>
-          <%= link_to 'Go Somewhere', 'https://www.golfgalaxy.com/', class: 'btn btn-primary' %>
+          <%= link_to 'Go Somewhere', interest, class: 'btn btn-primary' %>
         </div>
       </div>
     <% end %>
   </div>
-  <div class="col-4">
+  <div class="col-4 mb-2">
     <span class="title">Your possible hindrances:</span>
     <br>
     <% @hindrances.each do |hindrance| %>
@@ -28,7 +28,7 @@
     <% end %>
     <br>
   </div>
-  <div class="col-4">
+  <div class="col-4 mb-2">
     <span class="title">Your possible excuses:</span>
     <br>
     <% @excuses.each do |excuse| %>
