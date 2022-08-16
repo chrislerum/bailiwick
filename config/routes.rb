@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'excuses/show'
+  get 'hindrances/show'
+  get 'interests/show'
   devise_for :users
   namespace :admin do
       resources :interests do
@@ -12,6 +15,7 @@ Rails.application.routes.draw do
     end
   resources :hindrances
   resources :interests
+  resources :excuses
   get 'main/blank'
   root "main#index"
 end

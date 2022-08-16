@@ -1,0 +1,12 @@
+<span class="title">Your possible excuses:</span>
+<br>
+<% @excuses.each do |excuse| %>
+  <div class="card" style="width: 18rem;">
+    <%= image_tag excuse.image, class: 'card-img-top' %>
+    <div class="card-body">
+      <h5 class="card-title"><%= excuse.name %></h5>
+      <p class="card-text"><%= truncate excuse.description %></p>
+      <%= link_to 'Detail', excuse, class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>

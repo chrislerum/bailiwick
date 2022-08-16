@@ -25,8 +25,6 @@ class ExcuseDashboard < Administrate::BaseDashboard
     id
     description
     name
-    created_at
-    updated_at
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -34,10 +32,8 @@ class ExcuseDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = %i[
     id
     name
-    description
     image
-    created_at
-    updated_at
+    description
   ].freeze
 
   # FORM_ATTRIBUTES

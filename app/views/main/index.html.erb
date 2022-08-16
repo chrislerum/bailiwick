@@ -1,45 +1,11 @@
 <div class="row">
-  <div class="col-4 mb-2">
-    <span class="title">Your possible interests:</span>
-    <br>
-    <% @interests.each do |interest| %>
-      <div class="card" style="width: 18rem;">
-        <%= image_tag interest.image, class: 'card-img-top' %>
-        <div class="card-body">
-          <h5 class="card-title"><%= interest.name %></h5>
-          <p class="card-text"><%= interest.description %></p>
-          <%= link_to 'Go Somewhere', interest, class: 'btn btn-primary' %>
-        </div>
-      </div>
-    <% end %>
+  <div class="col-4">
+    <%= render 'interests' %>
   </div>
-  <div class="col-4 mb-2">
-    <span class="title">Your possible hindrances:</span>
-    <br>
-    <% @hindrances.each do |hindrance| %>
-      <div class="card" style="width: 18rem;">
-        <%= image_tag hindrance.image, class: 'card-img-top' %>
-        <div class="card-body">
-          <h5 class="card-title"><%= hindrance.name %></h5>
-          <p class="card-text"><%= hindrance.description %></p>
-          <%= link_to 'Go Somewhere', 'https://www.golfgalaxy.com/', class: 'btn btn-primary' %>
-        </div>
-      </div>
-    <% end %>
-    <br>
+  <div class="col-4">
+    <%= render 'hindrances' %>
   </div>
-  <div class="col-4 mb-2">
-    <span class="title">Your possible excuses:</span>
-    <br>
-    <% @excuses.each do |excuse| %>
-      <div class="card" style="width: 18rem;">
-        <%= image_tag excuse.image, class: 'card-img-top' %>
-        <div class="card-body">
-          <h5 class="card-title"><%= excuse.name %></h5>
-          <p class="card-text"><%= excuse.description %></p>
-          <%= link_to 'Go Somewhere', 'https://www.golfgalaxy.com/', class: 'btn btn-primary' %>
-        </div>
-      </div>
-    <% end %>
+  <div class="col-4">
+    <%= render 'excuses' %>
   </div>
 </div>

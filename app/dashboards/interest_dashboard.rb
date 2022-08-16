@@ -24,8 +24,7 @@ class InterestDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     name
-    created_at
-    updated_at
+    description
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -35,8 +34,6 @@ class InterestDashboard < Administrate::BaseDashboard
     name
     image
     description
-    created_at
-    updated_at
   ].freeze
 
   # FORM_ATTRIBUTES

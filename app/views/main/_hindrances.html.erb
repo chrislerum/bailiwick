@@ -1,0 +1,12 @@
+<span class="title">Your possible hindrances:</span>
+<br>
+<% @hindrances.each do |hindrance| %>
+  <div class="card" style="width: 18rem;">
+    <%= image_tag hindrance.image, class: 'card-img-top' %>
+    <div class="card-body">
+      <h5 class="card-title"><%= hindrance.name %></h5>
+      <p class="card-text"><%= truncate hindrance.description %></p>
+      <%= link_to 'Detail', hindrance, class: 'btn btn-primary' %>
+    </div>
+  </div>
+<% end %>
