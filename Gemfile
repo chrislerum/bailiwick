@@ -55,6 +55,7 @@ gem "bootsnap", require: false
 group :development, :test do
   gem 'rspec-rails'
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -66,6 +67,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'guard-rspec', require: false
 end
 
 group :test do
