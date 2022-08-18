@@ -6,7 +6,7 @@
     <div class="card-body">
       <h5 class="card-title"><%= hindrance.name %></h5>
       <p class="card-text"><%= truncate hindrance.description %></p>
-      <%= link_to 'Detail', hindrance, class: 'btn btn-primary' %>
+      <%= link_to hindrance.name, hindrance, class: 'btn btn-primary' %>
     </div>
   </div>
 <% end %>

@@ -6,7 +6,7 @@
     <div class="card-body">
       <h5 class="card-title"><%= excuse.name %></h5>
       <p class="card-text"><%= truncate excuse.description %></p>
-      <%= link_to 'Detail', excuse, class: 'btn btn-primary' %>
+      <%= link_to excuse.name, excuse, class: 'btn btn-primary' %>
     </div>
   </div>
 <% end %>
