@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_11_230530) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_23_033841) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -46,6 +46,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_11_230530) do
     t.string "name"
   end
 
+  create_table "galaxies", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "hindrances", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -58,6 +64,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_11_230530) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
+  end
+
+  create_table "planets", force: :cascade do |t|
+    t.string "name"
+    t.integer "star_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["star_id"], name: "index_planets_on_star_id"
+  end
+
+  create_table "stars", force: :cascade do |t|
+    t.string "name"
+    t.integer "galaxy_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["galaxy_id"], name: "index_stars_on_galaxy_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -76,4 +98,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_11_230530) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "planets", "stars"
+  add_foreign_key "stars", "galaxies"
 end

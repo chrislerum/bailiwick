@@ -8,4 +8,8 @@ class MainController < ApplicationController
 
   def blank
   end
+
+  def astro
+    @galaxies = Galaxy.includes(:stars, :planets)
+  end
 end
