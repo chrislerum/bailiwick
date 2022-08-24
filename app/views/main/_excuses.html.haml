@@ -1,0 +1,11 @@
+%span.title Your possible excuses
+%br
+- @excuses.each do |excuse|
+  .card{style: "width: 18rem;"}
+    = image_tag excuse.image, class: 'card-img-top'
+    .card-body
+      %h5.card-title
+        = excuse.name
+      %p.card-text
+        = truncate excuse.description
+      = link_to excuse.name, excuse, class: 'btn btn-primary'

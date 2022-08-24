@@ -1,0 +1,5 @@
+- @galaxies.each do |galaxy|
+  - if galaxy.stars.any?
+    = link_to galaxy.name, galaxy
+  - else
+    = galaxy.name

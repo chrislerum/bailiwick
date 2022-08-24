@@ -6,6 +6,7 @@ ruby "3.1.1"
 gem "administrate"
 gem 'devise'
 gem 'administrate-field-active_storage'
+gem "haml-rails", "~> 2.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"

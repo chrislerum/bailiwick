@@ -1,0 +1,12 @@
+%span.title
+  Your possible interests
+%br
+- @interests.each do |interest|
+  .card{style: "width: 18rem;"}
+    = image_tag interest.image, class: 'card-img-top'
+    .card-body
+      %h5.card-title
+        = interest.name
+      %p.card-text
+        = truncate interest.description
+      = link_to interest.name, interest, class: 'btn btn-primary'

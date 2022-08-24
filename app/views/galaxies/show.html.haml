@@ -1,0 +1,9 @@
+= link_to '<- Back to Galaxies', astro_path
+= @galaxy.name
+%br
+- @galaxy.stars.each do |star|
+  %br
+  - if star.planets.any?
+    = link_to star.name, star
+  - else
+    = star.name

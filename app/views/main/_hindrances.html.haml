@@ -1,0 +1,11 @@
+%span.title Your possible hindrances
+%br
+- @hindrances.each do |hindrance|
+  .card{style: "width: 18rem;"}
+    = image_tag hindrance.image, class: 'card-img-top'
+    .card-body
+      %h5.card-title
+        = hindrance.name
+      %p.card-text
+        = truncate hindrance.description
+      = link_to hindrance.name, hindrance, class: 'btn btn-primary'
