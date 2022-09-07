@@ -7,9 +7,13 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 server "139.144.17.207", user: "deploy", roles: %w{db}
-
-set :chruby_ruby, 'ruby-2.0.0-p247'
-
+set :application, 'bailiwick'
+set :repo_url, "git@github.com:chrislerum/bailiwick.git"
+set :chruby_ruby, '3.1.1'
+set :deploy_to, '/home/deploy/bailiwick'
+set :linked_files, fetch(:linked_files, []).push('config/database.yml')
+set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
+set :branch, 'main'
 
 # role-based syntax
 # ==================
