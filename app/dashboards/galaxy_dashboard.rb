@@ -14,6 +14,10 @@ class GalaxyDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime,
   }.freeze
 
+  def display_resource(galaxy)
+    galaxy.name
+  end
+
   # COLLECTION_ATTRIBUTES
   # an array of attributes that will be displayed on the model's index page.
   #
