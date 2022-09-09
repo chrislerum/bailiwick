@@ -15,6 +15,7 @@ gem 'capistrano-chruby'
 gem 'ed25519'
 gem 'bcrypt_pbkdf'
 gem 'pg'
+gem "passenger", ">= 5.3.2", require: "phusion_passenger/rack_handler"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
