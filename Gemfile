@@ -15,7 +15,6 @@ gem 'capistrano-chruby'
 gem 'ed25519'
 gem 'bcrypt_pbkdf'
 gem 'pg'
-gem "passenger"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
